@@ -109,6 +109,7 @@ class LabelSelectionSettingsUpdate(UpdateSchema):
 
 class MultiLabelSelectionQuestionSettingsUpdate(LabelSelectionSettingsUpdate):
     type: Literal[QuestionType.multi_label_selection]
+    options: conlist(item_type=ValueTextQuestionSettingsOption)
 
 
 class RankingQuestionSettingsUpdate(UpdateSchema):
